@@ -9,8 +9,9 @@ multiprocessing.Process(target, args) --> target is a function symbol, args an i
 
 multiprocessing.Pool([processes, initializer, initargs, maxtasksperchild])
 * instance.map() --> equivalent in function to builtin
-* instance.apply() --> equivalent to builtin, which though nearly-deprecated, is meant to wrapperize before
-args/kwargs unpacking was available
+* instance.apply() --> equivalent in function to builtin
+* instance.apply_async() --> understanding is that this fires up processes simultaneously, which then wait for data;
+for data that maps, this seems to reasonable; return value requires .get() method to retrieve
 * Note: Pool uses 'return' statement in target function; it seems target fct for Process needs to directly interact with Queue
 * Note2: maxtasksperchild init arg follows after a pattern found in Apache, mod_wsgi etc. By default,
 the Python pool worker processes live for the duration of the pool's work Queue
