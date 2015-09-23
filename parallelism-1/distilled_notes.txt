@@ -6,3 +6,5 @@ multiprocessing.Process(target, args) --> target is a function symbol, args an i
 * instance.run() --> to run process
 * instance.join() --> to exit a completeted process
 * instance._identity --> can be used to refer to a unique process
+
+multiprocessing.Pool
