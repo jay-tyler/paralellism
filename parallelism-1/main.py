@@ -10,17 +10,17 @@ import string
 output = mp.Queue()
 
 # define a example function
-def rand_string(length, output):
+def rand_string(length, pos, output):
     """Generate a random string of numbers, lower- and uppercase chars"""
     rand_str = ''.join(random.choice(
                    string.ascii_lowercase
                    + string.ascii_uppercase
                    + string.digits)
                 for i in range(length))
-    output.put(rand_str)
+    output.put((pos, rand_str))
 
 # Setup a list of processes that we want to run
-processes = [mp.Process(target=rand_string, args=(5, output)) for x in range(5)]
+processes = [mp.Process(target=rand_string, args=(5, x, output)) for x in range(4)]
 
 # Running each process
 for p in processes:
@@ -32,5 +32,7 @@ for p in processes:
 
 #
 results = [output.get() for p in processes]
+results.sort()
+results = [r[1] for r in results]
 
 print(results)
