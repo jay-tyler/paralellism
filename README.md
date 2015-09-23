@@ -1,4 +1,4 @@
-# parallelism
+# parallelism-concurrency
 Learning to deal with parallelism and concurrency using Python.
 
 Python has been my primary learning language, and as of the start of this repo, I'm not fully competent
