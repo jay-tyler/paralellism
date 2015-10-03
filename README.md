@@ -15,6 +15,7 @@ Libraries to explore:
 ## References (tied to numbered folders):
 
 1. [Multiprocessing Intro](http://sebastianraschka.com/Articles/2014_multiprocessing_intro.html)
+2. Python Concurrency from the Ground Up
 
 Note that each folder maintains an independent virtualenv.
 
