@@ -4,7 +4,7 @@
 from socket import *
 from fib import fib
 from threading import Thread
-from concurrent.futures import ProcessPoolExecutor as Pool
+from concurrent.futures import ProcessPoolExecutor as Pool  # concurrent.futures available for >= Py3.2
 
 pool = Pool(4)
 
